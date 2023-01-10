@@ -1,5 +1,7 @@
-// Say hi
+import { helloYou } from './hello';
 
-export const helloYou = (name: string) => {
-    console.log(`Hello ${name}`);
-};
+window.Webflow ||= [];
+window.Webflow.push(() => {
+  const name = 'Valouz';
+  helloYou(name);
+});
