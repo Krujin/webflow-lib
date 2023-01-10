@@ -1,5 +1,5 @@
 // Say hi
 
-export default function helloYou(name: string) {
+export default function helloName(name: string) {
     console.log(`Hello ${name}`);
 };
