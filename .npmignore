@@ -2,3 +2,5 @@ node_modules/
 .npmignore
 package-lock.json
 tsconfig.json
+src/
+LICENSE.md
