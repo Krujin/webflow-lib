@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild ./src --bundle --outfile=./dist/index.js"
+    "build": "esbuild ./src --bundle --outfile=./dist/index.js",
+    "package": "npm version patch && npm publish --access public"
   },
   "repository": {
     "type": "git",
