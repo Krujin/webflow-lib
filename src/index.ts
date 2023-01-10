@@ -1,7 +1,6 @@
-import { helloYou } from './hello';
+import { helloYou } from '$utils/hello';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  const name = 'Valouz';
-  helloYou(name);
+  helloYou("Val");
 });

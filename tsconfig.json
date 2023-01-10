@@ -1,11 +1,9 @@
 {
-  "compilerOptions": {
-    "target": "ES2019",
-    "module": "ESNext",
-    "removeComments": true,
-    "downlevelIteration": true,
-    "strict": true,
-    "rootDir": "./src",
-    "outDir": "./dist"
+    "compilerOptions": {
+      "rootDir": ".",
+      "baseUrl": "./",
+      "paths": {
+        "$utils/*": ["src/utils/*"]
+      }
+    }
   }
-}
