@@ -1,0 +1,29 @@
+{
+  "name": "@krujin/webflow-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krujin/webflow-lib.git"
+  },
+  "author": "Valentin Rubio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Krujin/webflow-lib/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/Krujin/webflow-lib#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "pnpm": "^7.24.2"
+  }
+}
