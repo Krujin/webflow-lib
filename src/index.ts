@@ -1,6 +1,6 @@
-import helloName from '$utils/hello';
+import verifyInput from '$utils/inputVerifier';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  helloName("Val");
+  verifyInput();
 });
