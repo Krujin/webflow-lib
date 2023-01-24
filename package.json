@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild ./src --bundle --outfile=./dist/index.js --format=iife --global-name=webflowLib",
+    "build": "esbuild ./src --bundle --outfile=./dist/index.js --format=iife",
     "publish-patch": "npm version patch && npm publish --access public",
     "publish-minor": "npm version minor && npm publish --access public"
   },
