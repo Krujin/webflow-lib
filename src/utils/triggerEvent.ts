@@ -9,12 +9,10 @@ export const triggerConversion = (
     elementId, googleId, formId
 ) => {
     document.getElementById(elementId).addEventListener('click', () => {
-        function gtag_report_conversion(url) {
-            console.log('event-sent');
-            gtag('event', 'conversion', {
-                'send_to': `${googleId}/${formId}`
-            });
-            return false;
-        }
+        console.log('event-sent');
+        gtag('event', 'conversion', {
+            'send_to': `${googleId}/${formId}`
+        });
+        return false;
     });
 };
