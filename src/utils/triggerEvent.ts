@@ -1,16 +1,16 @@
 /**
  * Fires an Analytics event for the selected element
- * @param element The trigger element
+ * @param elementId The trigger elementId
  * @param googleId Google analytics ID (GT-XXXXXXXXX, G-XXXXXXXXX, or AW-XXXXXXXXX)
  * @param formId The ID of the form targeted by the conversion
 */
 
 export const triggerConversion = (
-    element, googleId, formId
+    elementId, googleId, formId
 ) => {
-    element.addEventListener('click', () => {
+    document.getElementById(elementId).addEventListener('click', () => {
         function gtag_report_conversion(url) {
-
+            console.log('event-sent');
             gtag('event', 'conversion', {
                 'send_to': `${googleId}/${formId}`
             });
