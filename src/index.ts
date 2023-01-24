@@ -1,6 +1,10 @@
 import verifyInput from '$utils/inputVerifier';
 
-window.Webflow ||= [];
-window.Webflow.push(() => {
-  verifyInput();
-});
+export class webflowLib {
+  constructor() {
+  };
+
+  verify() {
+    verifyInput();
+  }
+};
