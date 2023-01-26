@@ -1,5 +1,5 @@
-import { verifyInput } from '$utils/inputVerifier';
-import { triggerConversion } from '$utils/triggerEvent';
+import * as verify from '$utils/verify';
+import * as trigger from '$utils/triggerEvent';
 
-window.triggerConversion = triggerConversion;
-window.verifyInput = verifyInput;
+window.trigger = trigger;
+window.verify = verify;
