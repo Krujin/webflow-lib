@@ -18,8 +18,3 @@ export const generateToken = (
     });
   });
 };
-
-// function recaptchaCallbackContact() {
-//   console.log('clicked');
-//   document.getElementById('submitRequest').removeAttribute('disabled');
-// };
