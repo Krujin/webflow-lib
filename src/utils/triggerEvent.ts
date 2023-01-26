@@ -9,10 +9,9 @@ export const triggerConversion = (
     elementId, googleId, formId
 ) => {
     document.getElementById(elementId).addEventListener('click', () => {
-        console.log('event-sent');
+        console.log('conversion sent');
         gtag('event', 'conversion', {
             'send_to': `${googleId}/${formId}`
         });
-        return false;
     });
 };
