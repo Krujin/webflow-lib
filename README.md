@@ -6,7 +6,7 @@ Various utils for Webflow
 
 Inside head tag:
 
-    <script defer src="https://cdn.jsdelivr.net/npm/@krujin/webflow-lib@1.0.28/dist/index.js" onload="onLibReady()"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@krujin/webflow-lib@1/dist/index.js" onload="onLibReady()"></script>
 
 Before </body> tag: 
 
