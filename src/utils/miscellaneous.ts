@@ -8,7 +8,7 @@ export const autoCopyright = (
   const elements = document.querySelectorAll("[autoCopyright='true']");
 
   if (elements.length === 0) {
-    throw new Error("autoCopyright: no elements found.");
+    console.log("autoCopyright: no elements found.");
   } else {
     elements.forEach((element) => {
       const currentYear = new Date().getFullYear();
