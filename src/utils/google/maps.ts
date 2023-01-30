@@ -19,7 +19,7 @@ export const geoLocate = (
         } else {
           let endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?key=' + apiKey + '&address=' + encodeURI(place);
           fetch(endpoint, { method: 'GET' })
-//          .then((response) => response.json())
+          .then((response) => response.json())
             .then((data) => {
               console.log('Success:', data);
             })
