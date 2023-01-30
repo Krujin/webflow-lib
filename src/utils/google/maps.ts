@@ -12,16 +12,20 @@ export const geoLocate = (
     console.log("geoLocate: no elements found.");
   } else {
     elements.forEach((element: HTMLInputElement) => {
+      new google.maps.places.Autocomplete(element);
       element.addEventListener('change', () => {
         const place = element.value;
         if (!place) {
-          console.log("geoLocate: element needs to be an input");
+          console.log("geoLocate: element needs to be an input.");
         } else {
           let endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?key=' + apiKey + '&address=' + encodeURI(place);
           fetch(endpoint, { method: 'GET' })
-          .then((response) => response.json())
+            .then((response) => response.json())
             .then((data) => {
-              console.log('Success:', data);
+              if (data.status === "OK")
+                console.log(data.results[0].geometry.location);
+            else
+              console.log("geoLocate: place not found.")
             })
             .catch((error) => {
               console.error('Error:', error);
