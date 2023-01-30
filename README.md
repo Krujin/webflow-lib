@@ -16,3 +16,6 @@ Before </body> tag:
         };
     </script>
 
+## Usage
+
+Add your code inside the onLibReady() function.

@@ -1,14 +1,14 @@
 /**
- * Update copyright
+ * Automatically updates year elements
  * @param autoCopyright Attribute to add to the copyright text with the value = true 
 */
 
-const autoCopyright = (
+export const autoCopyright = (
 ) => {
   const elements = document.querySelectorAll("[autoCopyright='true']");
 
   elements.forEach((element) => {
       const currentYear = new Date().getFullYear();
-      element.innerHTML = currentYear;
+      element.innerHTML = String(currentYear);
   });
 };
