@@ -26,7 +26,7 @@ export const autoCopyright = (
 export const removeSliderDots = (
   sliderId: string, hideNb: number
 ) => {
-  let slider = document.querySelectorAll(sliderId)[0];
+  let slider = document.querySelectorAll('#' + sliderId)[0];
   let sliderDots = slider.lastChild.childNodes;
   let arrowRight = slider.lastChild.previousSibling as HTMLElement;
   let arrowLeft = slider.lastChild.previousSibling.previousSibling as HTMLElement;
