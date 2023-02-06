@@ -32,6 +32,8 @@ export const removeSliderDots = (
   let arrowLeft = slider.lastChild.previousSibling.previousSibling as HTMLElement;
   let counter = 0;
 
+  console.log(slider, sliderDots, arrowRight, arrowLeft);
+
   for (let i = 1; i < hideNb; i++) {
     let position = sliderDots.length - i;
     if (sliderDots[position])
