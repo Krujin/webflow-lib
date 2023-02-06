@@ -16,3 +16,38 @@ export const autoCopyright = (
     });
   }
 };
+
+/**
+ * Remove specific slider dots
+ * @param sliderId The id of the targeted slider
+ * @param hideNb The number of dots to hide
+*/
+
+export const removeSliderDots = (
+  sliderId: string, hideNb: number
+) => {
+  let slider = document.querySelectorAll(sliderId)[0];
+  let sliderDots = slider.lastChild.childNodes;
+  let arrowRight = slider.lastChild.previousSibling as HTMLElement;
+  let arrowLeft = slider.lastChild.previousSibling.previousSibling as HTMLElement;
+  let counter = 0;
+
+  for (let i = 1; i < hideNb; i++) {
+    let position = sliderDots.length - i;
+    if (sliderDots[position])
+    (sliderDots[position] as HTMLElement).style.display = "none";
+  }
+
+  arrowRight.addEventListener('click', () => {
+    counter++;
+    if (counter >= (sliderDots.length - hideNb - 1)) {
+      arrowRight.style.display = "none";
+    } else {
+      arrowRight.style.display = "flex";
+    }
+  });
+
+  arrowLeft.addEventListener('click', () => {
+    counter--;
+  });
+};
