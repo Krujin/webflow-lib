@@ -36,7 +36,7 @@ export const removeSliderDots = (
 
   for (let i = 1; i < hideNb; i++) {
     let position = sliderDots.length - i;
-    console.log('in', position);
+    console.log(sliderDots, sliderDots.length);
     if (sliderDots[position]) {
       console.log('called');
       sliderDots[position].style.display = "none";
