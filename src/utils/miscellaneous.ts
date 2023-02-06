@@ -26,16 +26,16 @@ export const autoCopyright = (
 export const removeSliderDots = (
   sliderId: string, hideNb: number
 ) => {
-  let sliderDots = document.querySelector('#' + sliderId + ' > .w-slider-nav');
+  let sliderDots: NodeListOf<HTMLElement> = document.querySelectorAll('#' + sliderId + ' > .w-slider-dot');
   let arrowRight = document.querySelector('#' + sliderId + ' > .w-slider-arrow-right');
   let arrowLeft = document.querySelector('#' + sliderId + ' > .w-slider-arrow-left');
   let counter = 0;
 
-  console.log(sliderDots, sliderDots.children, sliderDots.children.length);
+  console.log(sliderDots);
 
   for (let i = 1; i < hideNb; i++) {
     let position = sliderDots.length - i;
-    console.log(sliderDots, sliderDots.length);
+    console.log(sliderDots.length);
     if (sliderDots[position]) {
       console.log('called');
       sliderDots[position].style.display = "none";
