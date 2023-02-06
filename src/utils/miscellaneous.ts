@@ -27,17 +27,13 @@ export const removeSliderDots = (
   sliderId: string, hideNb: number
 ) => {
   let sliderDots: NodeListOf<HTMLElement> = document.querySelectorAll('#' + sliderId + ' > .w-slider-nav > .w-slider-dot');
-  let arrowRight = document.querySelector('#' + sliderId + ' > .w-slider-arrow-right');
-  let arrowLeft = document.querySelector('#' + sliderId + ' > .w-slider-arrow-left');
+  let arrowRight: HTMLElement = document.querySelector('#' + sliderId + ' > .w-slider-arrow-right');
+  let arrowLeft: HTMLElement = document.querySelector('#' + sliderId + ' > .w-slider-arrow-left');
   let counter = 0;
-
-  console.log(sliderDots);
 
   for (let i = 1; i < hideNb; i++) {
     let position = sliderDots.length - i;
-    console.log(sliderDots.length);
     if (sliderDots[position]) {
-      console.log('called');
       sliderDots[position].style.display = "none";
     }
   }
