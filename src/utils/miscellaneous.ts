@@ -26,7 +26,7 @@ export const autoCopyright = (
 export const removeSliderDots = (
   sliderId: string, hideNb: number
 ) => {
-  let sliderDots: NodeListOf<HTMLElement> = document.querySelectorAll('#' + sliderId + ' > .w-slider-nav');
+  let sliderDots: NodeListOf<HTMLElement> = document.querySelectorAll('#' + sliderId + ' > .w-slider-dot');
   let arrowRight = document.querySelector('#' + sliderId + ' > .w-slider-arrow-right');
   let arrowLeft = document.querySelector('#' + sliderId + ' > .w-slider-arrow-left');
   let counter = 0;
