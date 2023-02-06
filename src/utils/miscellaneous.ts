@@ -36,8 +36,11 @@ export const removeSliderDots = (
 
   for (let i = 1; i < hideNb; i++) {
     let position = sliderDots.length - i;
-    if (sliderDots[position])
-    (sliderDots[position] as HTMLElement).style.display = "none";
+    console.log('in', position);
+    if (sliderDots[position]) {
+      console.log('called');
+      sliderDots[position].style.display = "none";
+    }
   }
 
   arrowRight.addEventListener('click', () => {
