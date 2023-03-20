@@ -31,7 +31,11 @@ export const removeSliderDots = (
   let arrowLeft: HTMLElement = document.querySelector('#' + sliderId + ' > .w-slider-arrow-left');
   let counter = 0;
 
-  for (let i = 1; i < hideNb; i++) {
+  for (let i = 0; i < sliderDots.length; i++) {
+    sliderDots[i].style.pointerEvents = "none";
+  }
+
+  for (let i = 1; i <= hideNb; i++) {
     let position = sliderDots.length - i;
     if (sliderDots[position]) {
       sliderDots[position].style.display = "none";
@@ -40,14 +44,19 @@ export const removeSliderDots = (
 
   arrowRight.addEventListener('click', () => {
     counter++;
+    handleArrowVisibility();
+  });
+
+  arrowLeft.addEventListener('click', () => {
+    counter--;
+    handleArrowVisibility();
+  });
+
+  function handleArrowVisibility() {
     if (counter >= (sliderDots.length - hideNb - 1)) {
       arrowRight.style.display = "none";
     } else {
       arrowRight.style.display = "flex";
     }
-  });
-
-  arrowLeft.addEventListener('click', () => {
-    counter--;
-  });
+  };
 };
