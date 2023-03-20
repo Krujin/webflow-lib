@@ -42,6 +42,8 @@ export const removeSliderDots = (
     }
   }
 
+  handleArrowVisibility();
+
   arrowRight.addEventListener('click', () => {
     counter++;
     handleArrowVisibility();
@@ -53,6 +55,11 @@ export const removeSliderDots = (
   });
 
   function handleArrowVisibility() {
+    if (counter == 0) {
+      arrowLeft.style.display = "none";
+    } else {
+      arrowLeft.style.display = "flex";
+    }
     if (counter >= (sliderDots.length - hideNb - 1)) {
       arrowRight.style.display = "none";
     } else {
